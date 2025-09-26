@@ -1,0 +1,235 @@
+Agri-Minds – Full Application Build Prompt (Developer-Ready)
+
+Project Objective:
+Build Agri-Minds, a web-based AI-powered crop monitoring and advisory platform for smallholder farmers, integrating satellite NDVI imagery, soil API data, and predictive AI recommendations. The system should be cost-effective, easy to use, and actionable, focusing on sustainable farming.
+
+1. General Requirements
+
+Platform: Responsive web application (desktop & mobile)
+
+Frontend: React.js / Next.js + Tailwind CSS / Material UI for design
+
+Backend: Node.js with Express.js OR Django/Flask (Python)
+
+Database: PostgreSQL / MySQL
+
+AI/ML: Python (scikit-learn, TensorFlow, or PyTorch)
+
+External APIs:
+
+Soil API (e.g., Ambee) for soil moisture, pH, temperature
+
+Satellite imagery APIs (Sentinel Hub, NASA, or Google Earth Engine) for NDVI
+
+Optional Weather API for rainfall, temperature, humidity
+
+2. User Types & Authentication
+
+Farmers (Primary Users)
+
+Register/Login with Email + Password
+
+Farm location & crop type stored
+
+Admin / Expert (Optional)
+
+Monitor users and alerts
+
+Adjust AI recommendations
+
+Authentication Features:
+
+Password hashing
+
+Forgot password / Reset link
+
+Role-based access control
+
+3. Pages & Features (UI/UX Flow)
+A. Landing Page / Home
+
+Hero banner: Eye-catching crop/farm image + tagline
+
+CTA Buttons: “Get Started” / “View Dashboard”
+
+Feature highlights:
+
+Real-time soil data ✔
+
+NDVI maps ✔
+
+AI-driven recommendations ✔
+
+Predictive alerts ✔
+
+Optional testimonials section
+
+Footer: About, Contact, Social links
+
+Lovable UI Tip: Use cards with icons and hover animations, light green/yellow color palette to feel friendly and nature-themed.
+
+B. Registration / Login
+
+Fields: Name, Email, Password, Farm Location, Crop Type
+
+Validation messages for incorrect input
+
+Social login (optional)
+
+User Flow: Registration → Confirmation Email → Redirect to Dashboard
+
+Lovable UI Tip: Friendly placeholder texts like “Enter your farm name or location 🌾”
+
+C. Farmer Dashboard
+
+Top Summary Cards: Soil Moisture, pH, Temperature, NDVI Index, Alerts
+
+Middle Section: Interactive charts (line charts for soil parameters, NDVI trends)
+
+Bottom Section: Quick actions: Add Field, Request AI Recommendation
+
+Sidebar: Insights, Recommendations, Reports
+
+Lovable UI Tip: Use color-coded alerts (green/yellow/red) and interactive hover tooltips explaining values.
+
+D. Crop Health Insights
+
+Field selection dropdown
+
+NDVI map: Color-coded by health
+
+Soil graphs: Moisture, pH, temperature trends
+
+Alerts panel: Stressed areas flagged
+
+Filters: Date range, crop type
+
+Lovable UI Tip: NDVI map should update live with soil API data, use smooth color gradients for clarity.
+
+E. AI Recommendations
+
+Personalized suggestions: Irrigation schedule, fertilizer application, crop treatment
+
+Scenario analysis: “What-if” simulation for rainfall, soil changes
+
+Downloadable reports (PDF)
+
+Optional push notifications / email alerts
+
+Lovable UI Tip: Recommendations displayed in card format with actionable icons, e.g., 💧 for irrigation, 🌱 for fertilizer.
+
+F. Reports & History
+
+Historical NDVI and soil charts
+
+Export data: PDF / Excel
+
+Past alerts history
+
+Graph types: Line, bar, and heatmaps for field comparison
+
+Lovable UI Tip: Include a timeline visualization for trends, easy to scan for farmers.
+
+G. Admin / Expert Panel
+
+User management: View registered farmers
+
+Alert monitoring: See stressed fields
+
+Adjust AI recommendations if needed
+
+Dashboard: Aggregate farm health stats
+
+Lovable UI Tip: Use clean tables with colored status indicators for alerts.
+
+H. Contact / Support
+
+Contact form: Name, Email, Message
+
+FAQ section
+
+Optional chatbot for instant help
+
+Lovable UI Tip: Friendly language, e.g., “Need help? We’re here to assist 🌾”
+
+4. Backend & Database Design
+
+Tables:
+
+Users: user_id, name, email, password_hash, user_type, farm_location
+
+Fields: field_id, user_id, crop_type, area, coordinates
+
+Soil Data: field_id, date, moisture, pH, temperature
+
+NDVI Data: field_id, date, NDVI_value
+
+Recommendations: recommendation_id, field_id, date, AI_suggestion
+
+Alerts: alert_id, field_id, date, type, message
+
+5. AI / ML Integration
+
+Inputs: NDVI values, soil parameters, optional weather data
+
+Outputs:
+
+Predict crop stress / nutrient deficiency
+
+Personalized irrigation/fertilizer suggestions
+
+Alerts for early intervention
+
+Scenario Analysis:
+
+Simulate “what-if” conditions for rainfall, soil, or nutrients
+
+Display: Dashboard and recommendation cards
+
+Lovable Tip: Display confidence scores with emojis, e.g., “🌟 90% confidence that field needs irrigation tomorrow.”
+
+6. APIs & External Integrations
+
+Soil API → Fetch real-time soil moisture, pH, temperature
+
+Satellite API → NDVI mapping and crop health visuals
+
+Optional Weather API → Rainfall, temperature, humidity
+
+Optional Notification API → Email/SMS for alerts
+
+7. Security & Scalability
+
+Secure authentication
+
+Role-based access control
+
+Input validation & sanitization
+
+Scalable architecture: microservices / modular backend
+
+Optional offline mode: Cache last soil & NDVI data for limited connectivity
+
+8. UI/UX Design Guidelines
+
+Nature-themed color palette: Green, Yellow, Earth tones
+
+Responsive design for mobile-first usage
+
+Minimal clicks to access recommendations
+
+Hover effects for charts and NDVI maps
+
+Pop-up tips explaining technical terms (pH, NDVI) in farmer-friendly language
+
+9. Deliverables
+
+Fully functional responsive web application
+
+Dashboard with NDVI maps, soil API data, and AI recommendations
+
+Historical reports and export functionality
+
+Admin panel for management (optional)
+
+Complete documentation: Installation, API keys, AI model explanation, user guide
